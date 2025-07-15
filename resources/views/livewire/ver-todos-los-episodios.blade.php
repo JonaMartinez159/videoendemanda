@@ -9,21 +9,26 @@
             </select>
             <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 md:gap-4 gap-2">
 
-                @foreach ($todos_los_episodios as $episodio)
-                    @if ($temporada == $episodio['temporada'])
-                        <div class="col-span-1">
-                            <a href="/reproducir/{{ $episodio['path']}}"> 
-                                <img src="{{asset('img/deporvida-programa.jpg')}}" alt="Imagen de fondo">
-                            </a>                  
-                        </div>  
-                        <div class="col-span-3">
-                            <div class="pt-4 px-1">
-                                <p class="text-white text-md">{{ $episodio['nombre']}}</p>
-                                <p class="text-gray-400 text-sm">{{ $episodio['descripcion']}}</p>
+                @if ($todos_los_episodios != null)
+                    @foreach ($todos_los_episodios as $episodio)
+                        @if ($temporada == $episodio['temporada'])
+                            <div class="col-span-1">
+                                <a href="/reproducir/{{ $episodio['path']}}"> 
+                                    <img src="{{asset('img/deporvida-programa.jpg')}}" alt="Imagen de fondo">
+                                </a>                  
+                            </div>  
+                            <div class="col-span-3">
+                                <div class="pt-4 px-1">
+                                    <p class="text-white text-md">{{ $episodio['nombre']}}</p>
+                                    <p class="text-gray-400 text-sm">{{ $episodio['descripcion']}}</p>
+                                </div>
                             </div>
-                        </div>
-                    @endif
-                @endforeach
+                        @endif
+                    @endforeach
+                @else
+                    <p class="text-white">No Hay Episodios</p>
+                @endif
+                
                 
             </div>
         </div>

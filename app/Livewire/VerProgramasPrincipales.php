@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class VerProgramasPrincipales extends Component
 {
-    private $data = [
+    /*private $data = [
         "id" => 1,
         "nombre" => "Derecho de mujer",
         "descripcion" => "Acompaña a Luz Amalia Barron a descubrir los derechos de la mujer",
@@ -42,13 +42,15 @@ class VerProgramasPrincipales extends Component
                 "updated_at" => "2025-07-07T02:07:58.000000Z"
             ]
         ]
-    ];
+    ];*/
 
     public $programas_data;
 
     public function mount()
     {
-        $this->programas_data = json_encode($this->data);
+        //$response = Http::get('https://live-srtn.nayarit.gob.mx/api/all');
+        $response = Http::withOptions(['verify' => false])->get('https://live-srtn.nayarit.gob.mx/api/allprogramas');
+        $this->programas_data = $response->json();
         return view('livewire.ver-programas-principales');
     }
 }

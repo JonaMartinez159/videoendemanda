@@ -1,4 +1,4 @@
-<div>
+<div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
     <div class="relative rounded-lg overflow-hidden">
         <img src="{{ $datos_del_programa['banner']}}" alt="Card Image" class="w-full h-[500px]">
 

@@ -1,13 +1,16 @@
-<x-app-layout>
+<x-app-layout >
 
     <x-navbar></x-navbar>
 
-    <div>
+    <div data-aos="fade-up" data-aos-duration="1000">
 
-        <div class="p-4">
+        <div class="p-4" >
             <img src="{{asset('img/banner.jpg')}}" class="h-[310px] w-full rounded-xl "><br><br>
 
-            @livewire('VerProgramasPrincipales')
+            <div data-aos="fade-up" data-aos-duration="2000">
+                @livewire('VerProgramasPrincipales')
+            </div>
+            
         </div>
 
         <!--
