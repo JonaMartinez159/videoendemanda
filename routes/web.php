@@ -24,6 +24,8 @@ Route::get('/dashboard', function () {
 
 Route::get('/ver/{id_programa}', [Programas::class, 'show'])->name('ver');
 
+Route::get('/play/{id_episodio}/{id_programa}', [Programas::class, 'playPrograma'])->name('play');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

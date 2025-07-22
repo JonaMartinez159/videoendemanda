@@ -10,11 +10,11 @@ class VerTodosLosEpisodios extends Component
 {
     public $id_programa;
     public $todos_los_episodios;
-    public $temporada='1';
+    //public $temporada='1';
 
     public function render()
     {
-        $apiurl = 'https://live-srtn.nayarit.gob.mx/api/episodios'.$this->id_programa;
+        $apiurl = 'https://live-srtn.nayarit.gob.mx/api/episodios/'.$this->id_programa;
         $response = Http::withOptions(['verify' => false])->get($apiurl);
         $this->todos_los_episodios = $response->json();
         

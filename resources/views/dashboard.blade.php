@@ -4,54 +4,32 @@
 
     <div data-aos="fade-up" data-aos-duration="1000">
 
-        <div class="p-4" >
-            <img src="{{asset('img/banner.jpg')}}" class="h-[310px] w-full rounded-xl "><br><br>
+        <div class="p-4" data-aos="fade-up" data-aos-duration="2000">
+            <img src="{{asset('img/banner.jpg')}}" class="md:h-[310px] w-full rounded-xl "><br><br>
 
-            <div data-aos="fade-up" data-aos-duration="2000">
+            <div>
                 @livewire('VerProgramasPrincipales')
             </div>
-            
-        </div>
+            <div>
+                @livewire('VerNuestraSeleccion')
+            </div>
+            <br><br>
 
-        <!--
-        <div class="p-8">
-            <p class="p-1 mb-1"><b>Ultimos Capitulos</b></p>
-
-            <div class="grid md:grid-cols-3">
-                <div class="md:col-span-2">
-                    <div class="grid md:grid-cols-3 mb-4">
-                        <div>
-                            <img src="{{asset('img/deporvida-programa.jpg')}}" alt="Imagen de fondo" class="rounded-xl">
+            <!-- radio -->
+            <div class="p-8" data-aos="fade-up" data-aos-duration="1000">
+                <div class="grid md:grid-cols-8 bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-lg">
+                    <div class="flex items-center justify-center col-span-2 col-start-2">
+                        <img src="{{asset('img/aztlanradio-solochica.png')}}" alt="" class="w-[250px] h-[400px] rounded-2xl"> 
+                    </div>
+                    <div class="flex items-center justify-center p-4 col-span-4">
+                        <div class="block pe-3">
+                            <h2 class="text-white text-4xl pb-1 bold-lg"><b>Si lo tuyo es la radio y los podcast</b></h2>
+                            <p class="text-white text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, officia! Pariatur necessitatibus commodi repellendus ratione, exercitationem suscipit fugiat aliquam accusantium sunt quas ducimus, molestiae ipsum dolores? Possimus quia impedit eveniet!</p>
                         </div>
-                        <div class="md:col-span-2 p-3">
-                            <div class="flex">
-                                <p class="bg-blue-600 text-white p-1 rounded-md w-fit text-xs bold me-1"><b>Deporvida</b></p>
-                                <p class="bg-blue-600 text-white p-1 rounded-md w-fit text-xs bold"><b>T1 E5</b></p>
-                            </div>
-                            <p class="pt-1"><b>Diego Estrada Habla sobre la participacion de Nayarit en los juegos nacionales CONADE</b></p>
-                            <p class="text-gray-500 text-xs">subido hace 2 horas</p>
-                        </div>
-                    </div>   
-                    <div class="grid md:grid-cols-3">
-                        <div>
-                            <img src="{{asset('img/deporte10-programa.jpg')}}" alt="Imagen de fondo" class="rounded-xl">
-                        </div>
-                        <div class="md:col-span-2 p-3">
-                            <div class="flex">
-                                <p class="bg-blue-600 text-white p-1 rounded-md w-fit text-xs bold me-1"><b>Deporvida</b></p>
-                                <p class="bg-blue-600 text-white p-1 rounded-md w-fit text-xs bold"><b>T1 E5</b></p>
-                            </div>
-                            <p class="pt-1"><b>Michelle Cruz y sus invitados celebran el triunfo del equipo Nayarita de baloncesto</b></p>
-                            <p class="text-gray-500 text-xs">subido hace 2 horas</p>
-                        </div>
-                    </div> 
-                </div>
-                <div class="m-4 bg-gray-100 rounded-xl">
-
+                    </div>
                 </div>
             </div>
-        </div> -->
-
+        </div>
         <x-footer></x-footer>
     </div>
 </x-app-layout>
