@@ -1,7 +1,7 @@
 <div class="md:mx-8 mb-4">
     
     <p class="p-1 mb-1 text-white"><b>Nuestra Seleccion para ti</b></p>
-    <div class="hidden lg:inline">
+    <div class="hidden lg:inline xl:inline 2xl:inline">
         <section class="splide" id="slider2" data-splide='{"type":"loop","perPage":4, "pagination":false}' aria-label="Splide Basic HTML Example">
             <div class="splide__track">
                   <ul class="splide__list">
@@ -10,7 +10,7 @@
                             <div class="pe-2">
                                 <a href="{{route('ver', $programa['id'])}}">
                                     <div class="rounded-lg overflow-hidden">
-                                        <img src="{{$programa['banner']}}" alt="Imagen de fondo" class="w-full md:h-[150px] h-[180px]">
+                                        <img src="{{$programa['banner']}}" alt="Imagen de fondo" class="w-full h-[170px] sm:h-[220px] xl:h-[170px] 2xl:h-[210px]">
                                         <div class="w-full items-end">
                                             <span class="text-white text-xs">{{ $programa['nombre']}}</span>
                                             <span class="text-gray-500 text-sm"></span>
@@ -24,7 +24,7 @@
             </div>
         </section>
     </div>
-    <div class="inline lg:hidden">
+    <div class="inline lg:hidden xl:hidden 2xl:hidden">
         <section class="splide" id="slider4" data-splide='{"type":"loop","perPage":3, "pagination":false}' aria-label="Splide Basic HTML Example">
             <div class="splide__track">
                   <ul class="splide__list">
@@ -33,7 +33,7 @@
                             <div class="pe-2">
                                 <a href="{{route('ver', $programa['id'])}}">
                                     <div class="rounded-lg overflow-hidden">
-                                        <img src="{{$programa['banner']}}" alt="Imagen de fondo" class="w-full md:h-[150px] h-[180px]">
+                                        <img src="{{$programa['banner']}}" alt="Imagen de fondo" class="w-full h-[200px] sm:h-[220px] ">
                                         <div class="w-full items-end">
                                         <span class="text-white text-xs">{{ $programa['nombre']}}</span>
                                         <span class="text-gray-500 text-sm"></span>

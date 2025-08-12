@@ -7,17 +7,17 @@
                 <option value="2">Temporada 2</option>
                 <option value="3">Temporada 3</option>
             </select>
-            <div class="grid md:grid-cols-4 grid-cols-8 md:gap-4 gap-2">
+            <div class="grid grid-cols-8 gap-4">
 
                 @if ($todos_los_episodios != null)
                     @foreach ($todos_los_episodios as $episodio)
                         <!-- Poner if temporada == 1 -->
-                            <div class="md:col-span-1 col-span-3 ">
+                            <div class="col-span-3 lg:col-span-2">
                                 <a href="{{route('play', ['id_episodio'=>$episodio['id'], 'id_programa'=>$id_programa])}}"> 
-                                    <img src="{{asset('img/deporvida-programa.jpg')}}" alt="Imagen de fondo">
+                                    <img src="{{$episodio['miniatura']}}" alt="Imagen de fondo">
                                 </a>                  
                             </div>  
-                            <div class="md:col-span-2 col-span-5">
+                            <div class="col-span-5 lg:col-span-6">
                                 <div class="pt-1 px-1">
                                     <p class="text-white text-sm md:text-md">{{ $episodio['nombre']}}</p>
                                     <p class="text-gray-400 text-xs md:text-sm">{{ $episodio['descripcion']}}</p>

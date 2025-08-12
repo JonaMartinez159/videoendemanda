@@ -13,7 +13,7 @@ class VerProgramasPrincipales extends Component
     public function mount()
     {
         //$response = Http::get('https://live-srtn.nayarit.gob.mx/api/all');
-        $response = Http::withOptions(['verify' => false])->get('https://live-srtn.nayarit.gob.mx/api/allprogramas');
+        $response = Http::withOptions(['verify' => false])->get('https://live-srtn.nayarit.gob.mx/api/programas-principales');
         $this->programas_data = $response->json();
         return view('livewire.ver-programas-principales');
     }

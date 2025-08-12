@@ -5,7 +5,7 @@
     <div data-aos="fade-up" data-aos-duration="1000">
 
         <div class="p-4" data-aos="fade-up" data-aos-duration="2000">
-            <img src="{{asset('img/banner.jpg')}}" class="md:h-[310px] w-full rounded-xl "><br><br>
+            <img src="{{asset('img/banner.jpg')}}" class="md:h-[310px] lg:h-[410px] w-full rounded-xl "><br><br>
 
             <div>
                 @livewire('VerProgramasPrincipales')
